@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>Control-CANT</title>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Control-CANT</h1>
+      <p>Control diario de personal</p>
+    </div>
+    <button id="installBtn" class="small hidden">Instalar</button>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="row">
+        <label for="fecha">Fecha</label>
+        <input id="fecha" type="date">
+      </div>
+      <div class="row">
+        <label for="turno">Turno</label>
+        <select id="turno">
+          <option>Mañana</option>
+          <option>Tarde</option>
+          <option>Noche</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2>Personal</h2>
+        <button id="addBtn" class="primary">+ Agregar</button>
+      </div>
+      <p class="hint">Tocá el nombre una sola vez para marcarlo.</p>
+      <div id="people" class="people"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2>Resumen</h2>
+        <button id="clearBtn" class="danger">Limpiar día</button>
+      </div>
+      <div class="summary">
+        <div><b id="total">0</b><span>Total</span></div>
+        <div><b id="presentes">0</b><span>Marcados</span></div>
+        <div><b id="faltan">0</b><span>Sin marcar</span></div>
+      </div>
+      <button id="saveBtn" class="save">Guardar control del día</button>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section class="card">
+      <h2>Historial</h2>
+      <div id="history" class="history"></div>
+    </section>
+  </main>
+
+  <dialog id="personDialog">
+    <form method="dialog" id="personForm">
+      <h2>Agregar persona</h2>
+      <input id="personName" required maxlength="60" placeholder="Nombre y apellido">
+      <div class="dialog-actions">
+        <button value="cancel">Cancelar</button>
+        <button id="confirmPerson" class="primary" value="default">Agregar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
