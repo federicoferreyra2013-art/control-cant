@@ -1,16 +1,19 @@
 # Control-CANT
 
-Primera versión del sistema de control diario.
+Sistema web/PWA para CANTECOR.
 
-## Cómo usarlo
-- Elegí fecha y turno.
-- Tocá el nombre una sola vez para marcarlo.
-- Volvé a tocarlo para desmarcarlo.
-- Guardá el control del día.
-- Los datos quedan guardados en el teléfono mediante almacenamiento local.
-- Para eliminar una persona del listado, mantené pulsado el nombre (o usá clic derecho en PC).
+## Roles
+- Administrador: acceso total.
+- Veedor 1 y 2: solo lectura.
+- Comandero: producción, planta y viajes.
+- Pañolero: combustible/pañol + producción y viajes.
+- Retrista 1 y 2: partes de máquinas.
+- Palero 1 y 2: partes de máquinas.
+- Mecánico 1 y 2: órdenes de trabajo.
+- Camioneros: no tienen usuario.
 
-## Publicarlo en GitHub Pages
-Subí estos archivos al repositorio y activá GitHub Pages desde Settings > Pages > Deploy from branch > main > /(root).
+## Importante
+Esta versión funciona como aplicación estática con `localStorage`. La contraseña no es un mecanismo de seguridad real porque el código queda visible al navegador. Para producción con información sensible se recomienda una base de datos y autenticación en servidor.
 
-Esta versión es una base simple y rápida.
+## Publicación
+Subir todos los archivos a la raíz de la rama `main`/`principal` de GitHub y activar GitHub Pages.

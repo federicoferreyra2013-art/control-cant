@@ -1,1 +1,9 @@
-{"name":"Control-CANT","short_name":"Control-CANT","start_url":"./","display":"standalone","background_color":"#0b0f14","theme_color":"#111827","lang":"es"}
+{
+  "name": "Control-CANT",
+  "short_name": "Control-CANT",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#b40000",
+  "icons": []
+}
